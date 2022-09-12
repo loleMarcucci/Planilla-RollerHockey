@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Proyecto JS 2 Final</title>
+</head>
+
+<body>
+
+    <div class="contenedorGrande">
+        <div class="contenedor">
+
+            <div class="formulario">
+            
+                <form class="row g-4 needs-validation" id="nuevaJugadora" novalidate>
+                    <h3>Nuevo Ingreso</h3> 
+                    <div class="col-md-12 position-relative">
+                        <label for="validationTooltip01" class="form-label">Nombre</label>
+                        <input name= "nombre"type="text" class="form-control" id="validationNombre" value="" required>
+                        
+                    </div>
+                    <div class="col-md-12 position-relative">
+                        <label for="validationTooltip02" class="form-label">Apellido</label>
+                        <input name="apellido" type="text" class="form-control" id="validationApellido" value="" required>
+                        
+                    </div>
+                    <div class="col-md-12 position-relative">
+                        <label for="validationTooltipUsername" class="form-label">E-Mail</label>
+                        <div class="input-group has-validation">
+                            <input name= "mail" type="text" class="form-control" id="validationEmail"
+                                aria-describedby="validationTooltipUsernamePrepend" required>
+                            
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <label for="validationTooltip05" class="form-label">Casaca</label>
+                        <input name= "casaca" type="" class="form-control" id="validationCasaca" required>
+                        
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit" id="btnAgregar">Agregar a Equipo</button>
+                    </div>
+                </form>
+            </div>
+        
+            <div class="planilla">
+                <h2>Equipo Morrigan</h2>
+        
+                <button class="btnAlert" id="btnSweetAlert">Buscar Jugadora</button>
+        
+            <select name="select" id="seleccionarJugadora">Seleccionar Jugadora</select>
+            
+            
+        
+            <div class="contSeleccionar" id="contenedor"></div>
+        
+            <br>
+        
+            <div class="habilitada" id="contenedorPartido">
+                <button class="btnHabilidata" type="button" id="boton">Jugadoras Habilitadas</button>
+                <p id="listaJugadoraHabilitada"></p>
+            </div> 
+        </div>
+    
+    </div>
+    </div>
+
+    <div class="container mt-5 shadow-lg p3 mb-5 bg-body rounded">
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>E-Mail</th>
+                    <th>Casaca</th>
+                </tr>
+            </thead>
+
+            <tbody id="data"></tbody>
+            
+        </table>
+    </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
